@@ -7,6 +7,7 @@ ts_library(
     name = "lib",
     srcs = [
         "async/animationFrameDebounce.ts",
+        "async/pReduce.ts",
         "stream/streamToString.ts",
         "structs/CaseInsensitiveMap.ts",
     ],
