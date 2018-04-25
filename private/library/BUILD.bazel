@@ -1,0 +1,23 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
+load("@build_bazel_rules_nodejs//:defs.bzl", "jasmine_node_test")
+
+ts_library(
+    name = "lib",
+    srcs = ["CaseInsensitiveMap.ts"],
+    tsconfig = "tsconfig.json",
+)
+
+ts_library(
+    name = "unit_test_lib",
+    srcs = ["CaseInsensitiveMap.test.ts"],
+    tsconfig = "tsconfig.json",
+    deps = [":lib"],
+)
+
+jasmine_node_test(
+    name = "unit_test",
+    size = "small",
+    srcs = [":unit_test_lib"],
+)

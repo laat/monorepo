@@ -1,0 +1,17 @@
+{
+  "name": "bazel-testing2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Sigurd Fosseng <sigurd@fosseng.net>",
+  "license": "MIT",
+  "dependencies": {
+    "google-closure-library": "^20180405.0.0"
+  },
+  "devDependencies": {
+    "@bazel/ibazel": "^0.3.1",
+    "@types/jasmine": "^2.8.6",
+    "jasmine": "^3.1.0",
+    "source-map-support": "^0.5.5",
+    "typescript": "^2.8.3"
+  }
+}
