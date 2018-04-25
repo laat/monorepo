@@ -5,13 +5,17 @@ load("@build_bazel_rules_nodejs//:defs.bzl", "jasmine_node_test")
 
 ts_library(
     name = "lib",
-    srcs = ["CaseInsensitiveMap.ts"],
+    srcs = [
+        "async/animationFrameDebounce.ts",
+        "stream/streamToString.ts",
+        "structs/CaseInsensitiveMap.ts",
+    ],
     tsconfig = "tsconfig.json",
 )
 
 ts_library(
     name = "unit_test_lib",
-    srcs = ["CaseInsensitiveMap.test.ts"],
+    srcs = ["structs/CaseInsensitiveMap.test.ts"],
     tsconfig = "tsconfig.json",
     deps = [":lib"],
 )

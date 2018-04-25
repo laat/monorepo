@@ -5,6 +5,7 @@
   "author": "Sigurd Fosseng <sigurd@fosseng.net>",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^9.6.6",
     "google-closure-library": "^20180405.0.0"
   },
   "devDependencies": {
