@@ -10,6 +10,7 @@ ts_library(
         "async/pReduce.ts",
         "stream/streamToString.ts",
         "structs/CaseInsensitiveMap.ts",
+        "structs/Trie.ts",
     ],
     tsconfig = "tsconfig.json",
 )
