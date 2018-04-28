@@ -1,0 +1,12 @@
+load(
+    "//tools/theo:theo.bzl",
+    "theo_transform",
+)
+
+theo_transform(
+    name = "buttons",
+    srcs = ["aliases.yml"],
+    entry_point = "buttons.yml",
+    fmt = "scss",
+    transform = "web",
+)

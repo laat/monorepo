@@ -1,0 +1,9 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
+
+nodejs_binary(
+    name = "theo",
+    entry_point = "theo/bin/theo",
+    node_modules = "@theo_runtime_deps//:node_modules",
+)

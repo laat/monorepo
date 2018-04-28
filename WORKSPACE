@@ -61,3 +61,9 @@ yarn_install(
     package_json = "//tools/mustache:package.json",
     yarn_lock = "//tools/mustache:yarn.lock",
 )
+
+yarn_install(
+    name = "theo_runtime_deps",
+    package_json = "//tools/theo:package.json",
+    yarn_lock = "//tools/theo:yarn.lock",
+)
