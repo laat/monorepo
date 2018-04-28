@@ -3,10 +3,18 @@ package(default_visibility = ["//visibility:public"])
 load(
     "//tools/design-tokens:defs.bzl",
     "html_tokens",
+    "html_tokens_server",
 )
 
 html_tokens(
     name = "html",
-    entry_point = "buttons.yaml",
+    srcs = glob(["*.yaml"]),
+    entry_point = "index.yaml",
     setup = "html-transform.js",
+)
+
+html_tokens_server(
+    name = "dev_server",
+    index = ":html",
+    tags = ["ibazel_notify_changes"],
 )

@@ -1,0 +1,73 @@
+global:
+  category: typography
+props:
+  FONT_WEIGHT_ULTRALIGHT:
+    value: 100
+    category: 'font-weight'
+    type: 'number'
+  FONT_WEIGHT_LIGHT:
+    value: 200
+    category: 'font-weight'
+    type: 'number'
+  FONT_WEIGHT_NORMAL:
+    value: 400
+    category: 'font-weight'
+    type: 'number'
+  FONT_WEIGHT_MEDIUM:
+    value: 500
+    category: 'font-weight'
+    type: 'number'
+  FONT_WEIGHT_BOLD:
+    value: 700
+    category: 'font-weight'
+    type: 'number'
+  
+  FONT_FAMILY_CODE:
+    value: 'monospace, monospace;'
+    category: 'font-family'
+    type: 'font-family'
+  FONT_FAMILY:
+    value: |
+      -apple-system, system-ui, BlinkMacSystemFont,
+      "Segoe UI", "Roboto", "Ubuntu",
+      "Helvetica Neue", sans-serif;
+    category: 'font-family'
+    type: 'font-family'
+  
+  
+  FONT_SIZE_LEADER:
+    value: '48px'
+    category: 'font-size'
+    type: 'font-size'
+    order: '1'
+    comment: 'h1'
+  FONT_SIZE_SUB_LEADER:
+    value: '32px'
+    category: 'font-size'
+    type: 'font-size'
+    order: '2'
+    comment: 'h2'
+  FONT_SIZE_HEADER:
+    value: '28px'
+    category: 'font-size'
+    type: 'font-size'
+    order: '3'
+    comment: 'h3'
+  FONT_SIZE_SUB_HEADER:
+    value: '24px'
+    category: 'font-size'
+    type: 'font-size'
+    order: '4'
+    comment: 'h4'
+  FONT_SIZE_ALT_HEADER:
+    value: '20px'
+    category: 'font-size'
+    type: 'font-size'
+    order: '5'
+    comment: 'h5'
+  FONT_SIZE_SUB_ALT_HEADER:
+    value: '18px'
+    category: 'font-size'
+    type: 'font-size'
+    order: '6'
+    comment: 'h6'

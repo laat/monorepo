@@ -5,11 +5,15 @@ load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
 nodejs_binary(
     name = "theo",
     entry_point = "theo/bin/theo",
-    node_modules = "//:node_modules",
+    node_modules = "@design-tokens_runtime_deps//:node_modules",
 )
 
 nodejs_binary(
-    name = "reload",
-    entry_point = "reload/bin/reload",
-    node_modules = "//:node_modules",
+    name = "dev_server",
+    data = [
+        "dev-server.js",
+        "@design-tokens_runtime_deps//:node_modules",
+    ],
+    entry_point = "bazel_testing2/tools/design-tokens/dev-server.js",
+    tags = ["ibazel_notify_changes"],
 )

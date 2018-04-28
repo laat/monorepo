@@ -93,7 +93,7 @@ class Styleguide {
   }
 
   renderFontWeight(props) {
-    return props.map(prop => {
+    return props.sort((a, b) => a.value > b.value).map(prop => {
       let example = html`
         <td>
           <div style="font-weight: ${prop.value};">
@@ -106,7 +106,7 @@ class Styleguide {
   }
 
   renderFontSize(props) {
-    return props.map(prop => {
+    return props.sort((a, b) => a.order < b.order).map(prop => {
       let example = html`
         <td>
           <div style="font-size: ${prop.value};">
@@ -298,9 +298,10 @@ class Styleguide {
         <head>
           <meta charset="utf-8" />
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <title>Design Tokens</title>
+          <title>Laat Design Tokens</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
+          <script src="/reload/reload.js"></script> 
           <style>
             html {
               box-sizing: border-box;
@@ -402,7 +403,7 @@ class Styleguide {
         <body>
           <header role="banner" class="banner">
             <div class="container">
-              <h1>Design Tokens</h1>
+              <h1>Laat Design Tokens</h1>
             </div>
           </header>
           <div class="container">

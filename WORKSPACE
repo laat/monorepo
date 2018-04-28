@@ -61,3 +61,9 @@ yarn_install(
     package_json = "//tools/mustache:package.json",
     yarn_lock = "//tools/mustache:yarn.lock",
 )
+
+yarn_install(
+    name = "design-tokens_runtime_deps",
+    package_json = "//tools/design-tokens:package.json",
+    yarn_lock = "//tools/design-tokens:yarn.lock",
+)

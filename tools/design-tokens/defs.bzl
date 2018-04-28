@@ -1,4 +1,8 @@
 load(
+    "@build_bazel_rules_nodejs//:defs.bzl",
+    "nodejs_binary",
+)
+load(
     "@bazel_skylib//:lib.bzl",
     "paths",
 )
@@ -86,4 +90,21 @@ def html_tokens(**kwargs):
         transform = "web",
         fmt = "html",
         **kwargs
+    )
+
+def html_tokens_server(name, index, tags):
+    native.genrule(
+        name = name,
+        srcs = [
+            index,
+        ],
+        outs = [
+            "%s.devserver" % name
+        ],
+        tools = [
+            "//tools/design-tokens:dev_server",
+        ],
+        cmd = "echo \"./$(location //tools/design-tokens:dev_server) $$(dirname $(location %s)) $$(basename $(location %s))\" > $@" % (index, index),
+        executable = True,
+        tags = tags
     )
