@@ -1,7 +1,8 @@
 workspace(name = "bazel_testing2")
 
-###############
+######################################################################
 # Node.JS
+######################################################################
 git_repository(
     name = "build_bazel_rules_nodejs",
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
@@ -12,8 +13,9 @@ load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories", "yarn_install"
 
 node_repositories(package_json = ["//:package.json"])
 
-###############
+######################################################################
 # Typescript
+######################################################################
 
 git_repository(
     name = "build_bazel_rules_typescript",
@@ -25,7 +27,7 @@ load("@build_bazel_rules_typescript//:defs.bzl", "ts_setup_workspace")
 
 ts_setup_workspace()
 
-############
+######################################################################
 # Go rules
 # ts_devserver needs the Go rules.
 http_archive(
@@ -40,10 +42,22 @@ go_rules_dependencies()
 
 go_register_toolchains()
 
-#############
+######################################################################
+# Skylib (skylark library)
+######################################################################
+
+git_repository(
+    name = "bazel_skylib",
+    remote = "https://github.com/bazelbuild/bazel-skylib.git",
+    tag = "0.3.1",  # change this to use a different release
+)
+
+######################################################################
 # External yarn deps
+######################################################################
+
 yarn_install(
-    name = "npm_deps",
-    package_json = ":package.json",
-    yarn_lock = ":yarn.lock",
+    name = "mustache_runtime_deps",
+    package_json = "//tools/mustache:package.json",
+    yarn_lock = "//tools/mustache:yarn.lock",
 )

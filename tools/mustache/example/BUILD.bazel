@@ -1,0 +1,14 @@
+load(
+    "//tools/mustache:mustache.bzl",
+    "mustache",
+)
+
+mustache(
+    name = "site",
+    out = "index.html",
+    json = "data.json",
+    partials = [
+        "header.mustache",
+    ],
+    template = "index.mustache",
+)

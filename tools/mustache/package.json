@@ -1,0 +1,11 @@
+{
+  "name": "@laat/mustache",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "mustache": "^2.3.0",
+    "source-map-support": "^0.5.5"
+  }
+}
