@@ -1,0 +1,12 @@
+package(default_visibility = ["//visibility:public"])
+
+load(
+    "//tools/design-tokens:defs.bzl",
+    "html_tokens",
+)
+
+html_tokens(
+    name = "html",
+    entry_point = "buttons.yaml",
+    setup = "html-transform.js",
+)

@@ -1,0 +1,13 @@
+imports: []
+global:
+  type: color
+  category: buttons
+props:
+  BUTTON_BACKGROUND:
+    value: '#0070d2'
+    category: 'text-color'
+    type: 'color'
+  TOKEN_SIZE:
+    value: "#0070d2"
+    category: 'spacing'
+    type: 'color'

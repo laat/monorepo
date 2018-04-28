@@ -1,0 +1,14 @@
+imports:
+  - ./aliases.yml
+global:
+  type: color
+  category: buttons
+props:
+  BUTTON_BACKGROUND:
+    value: '{!primary_color}'
+    category: 'text-color'
+    type: 'color'
+  TOKEN_SIZE:
+    value: "{!primary_color}"
+    category: 'spacing'
+    type: 'color'

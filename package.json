@@ -5,14 +5,15 @@
   "author": "Sigurd Fosseng <sigurd@fosseng.net>",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^9.6.6",
-    "google-closure-library": "^20180405.0.0"
+    "@types/node": "^9.6.6"
   },
   "devDependencies": {
     "@bazel/ibazel": "^0.3.1",
     "@types/jasmine": "^2.8.6",
     "jasmine": "^3.1.0",
+    "lodash": "^4.17.10",
     "source-map-support": "^0.5.5",
+    "theo": "^7.0.1",
     "typescript": "^2.8.3"
   }
 }

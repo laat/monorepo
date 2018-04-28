@@ -1,0 +1,18 @@
+load(
+    "//tools/design-tokens:defs.bzl",
+    "tokens_transform",
+    "sass_tokens",
+    "html_tokens",
+)
+
+sass_tokens(
+    name = "sass",
+    srcs = glob(["*.yml"]),
+    entry_point = "buttons.yml",
+)
+
+html_tokens(
+    name = "html",
+    srcs = glob(["*.yml"]),
+    entry_point = "buttons.yml",
+)
