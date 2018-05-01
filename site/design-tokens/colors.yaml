@@ -1,0 +1,16 @@
+global:
+  type: 'color'
+  category: 'background-color'
+props:
+  PRIMARY_COLOR: 
+    value: '#007bff'
+  SECONDARY_COLOR:
+    value: '#6c757d'
+  SUCCESS_COLOR:
+    value: '#28a745'
+  INFO_COLOR:
+    value: '#17a2b8'
+  WARNING_COLOR:
+    value: '#ffc107'
+  DANGER_COLOR:
+    value: '#dc3545'
