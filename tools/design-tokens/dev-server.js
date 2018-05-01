@@ -11,8 +11,8 @@ app.use(express.static(process.argv[2], { index: process.argv[3] }));
 
 const server = app.listen(0, () => {
   const url = `http://localhost:${server.address().port}`;
-  opn(`http://localhost:${server.address().port}`);
   console.log(`Dev Server started at ${url}`);
+  opn(url);
 });
 
 readline
