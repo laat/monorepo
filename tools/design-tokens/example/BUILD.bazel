@@ -3,6 +3,7 @@ load(
     "tokens_transform",
     "sass_tokens",
     "html_tokens",
+    "html_tokens_server",
 )
 
 sass_tokens(
@@ -15,4 +16,10 @@ html_tokens(
     name = "html",
     srcs = glob(["*.yml"]),
     entry_point = "buttons.yml",
+)
+
+html_tokens_server(
+    name = "dev_server",
+    index = ":html",
+    tags = ["ibazel_notify_changes"],
 )
