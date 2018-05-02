@@ -7,7 +7,18 @@ const express = require("express");
 const app = express();
 const reloadServer = reload(app);
 
-app.use(express.static(process.argv[2], { index: process.argv[3] }));
+app
+  .use(
+    require("connect-body-rewrite")({
+      accept(res) {
+        return res.getHeader("content-type").match(/text\/html/);
+      },
+      rewrite(body) {
+        return body.replace(/<\/head>/, '<script src="/reload/reload.js"></script>');
+      }
+    })
+  )
+  .use(express.static(process.argv[2], { index: process.argv[3] }));
 
 const server = app.listen(0, () => {
   const url = `http://localhost:${server.address().port}`;

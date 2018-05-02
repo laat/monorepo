@@ -301,7 +301,6 @@ class Styleguide {
           <title>Laat Design Tokens</title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css" />
-          <script src="/reload/reload.js"></script> 
           <style>
             html {
               box-sizing: border-box;
