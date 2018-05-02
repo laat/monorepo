@@ -14,7 +14,7 @@ app
         return res.getHeader("content-type").match(/text\/html/);
       },
       rewrite(body) {
-        return body.replace(/<\/head>/, '<script src="/reload/reload.js"></script>');
+        return body.replace(/<\/head>/, '<script src="/reload/reload.js"></script></head>');
       }
     })
   )
