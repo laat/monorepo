@@ -13,7 +13,6 @@
     "jasmine": "^3.1.0",
     "lodash": "^4.17.10",
     "source-map-support": "^0.5.5",
-    "theo": "^7.0.1",
     "typescript": "^2.8.3"
   }
 }
