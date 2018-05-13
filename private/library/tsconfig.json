@@ -2,7 +2,8 @@
   "compilerOptions": {
     "strict": true,
     "target": "es2015",
-    "lib": ["es2016", "dom"]
+    "lib": ["es2016", "dom"],
+    "esModuleInterop": true
   },
   "bazelOptions": {
     "suppressTsconfigOverrideWarnings": true
