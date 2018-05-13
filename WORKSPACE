@@ -85,3 +85,9 @@ yarn_install(
     package_json = "//tools/design-tokens:package.json",
     yarn_lock = "//tools/design-tokens:yarn.lock",
 )
+
+yarn_install(
+    name = "webpack_runtime_deps",
+    package_json = "//tools/webpack:package.json",
+    yarn_lock = "//tools/webpack:yarn.lock",
+)

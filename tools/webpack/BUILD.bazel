@@ -3,22 +3,13 @@ package(default_visibility = ["//visibility:public"])
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_library")
 load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary")
 
-filegroup(
-    name = "node_modules",
-    srcs = glob([
-        "node_modules/**/*.js",
-        "node_modules/**/*.d.ts",
-        "node_modules/**/*.json",
-    ]),
-)
-
 ts_library(
     name = "server",
     srcs = glob([
         "types/*.ts",
         "*.ts",
     ]),
-    node_modules = ":node_modules",
+    node_modules = "@webpack_runtime_deps//:node_modules",
     tsconfig = ":tsconfig.json",
 )
 
@@ -28,5 +19,5 @@ nodejs_binary(
         ":server",
     ],
     entry_point = "bazel_testing2/tools/webpack/dev-server.js",
-    node_modules = ":node_modules",
+    node_modules = "@webpack_runtime_deps//:node_modules",
 )
