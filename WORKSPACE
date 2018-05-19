@@ -7,7 +7,7 @@ workspace(name = "bazel_testing2")
 git_repository(
     name = "bazel_skylib",
     remote = "https://github.com/bazelbuild/bazel-skylib.git",
-    tag = "0.3.1",  # change this to use a different release
+    tag = "0.4.0",  # change this to use a different release
 )
 
 ######################################################################
@@ -16,7 +16,7 @@ git_repository(
 git_repository(
     name = "build_bazel_rules_nodejs",
     remote = "https://github.com/bazelbuild/rules_nodejs.git",
-    tag = "0.8.0",
+    tag = "0.9.1",
 )
 
 load("@build_bazel_rules_nodejs//:defs.bzl", "node_repositories", "yarn_install")
@@ -29,8 +29,8 @@ node_repositories(package_json = ["//:package.json"])
 ######################################################################
 http_archive(
     name = "io_bazel_rules_go",
-    sha256 = "f70c35a8c779bb92f7521ecb5a1c6604e9c3edd431e50b6376d7497abc8ad3c1",
-    url = "https://github.com/bazelbuild/rules_go/releases/download/0.11.0/rules_go-0.11.0.tar.gz",
+    sha256 = "c1f52b8789218bb1542ed362c4f7de7052abcf254d865d96fb7ba6d44bc15ee3",
+    url = "https://github.com/bazelbuild/rules_go/releases/download/0.12.0/rules_go-0.12.0.tar.gz",
 )
 
 load("@io_bazel_rules_go//go:def.bzl", "go_rules_dependencies", "go_register_toolchains")
@@ -62,7 +62,7 @@ browser_repositories(
 git_repository(
     name = "build_bazel_rules_typescript",
     remote = "https://github.com/bazelbuild/rules_typescript.git",
-    tag = "v0.13.0",
+    tag = "v0.14.0",
 )
 
 load("@build_bazel_rules_typescript//:defs.bzl", "ts_setup_workspace")
